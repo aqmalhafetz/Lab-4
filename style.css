@@ -1,3 +1,4 @@
+
     * {
       margin: 0;
       padding: 0;
@@ -36,7 +37,8 @@
       justify-content: center;
       padding: 16px 24px;
       color: #ffffff;
-      background: linear-gradient(110deg, #12304f 0%, #12304f 45%, #2a8f9b 100%);
+      background-image: url(header.jpg);
+      background-size: 20px;
     }
     .logo h1 { font-size: 2rem; }
     .logo p  { font-size: 0.9rem; color: #bfe3e8; }
