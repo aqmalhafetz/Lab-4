@@ -38,7 +38,10 @@
       padding: 16px 24px;
       color: #ffffff;
       background-image: url(header.jpg);
-      background-size: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
     }
     .logo h1 { font-size: 2rem; }
     .logo p  { font-size: 0.9rem; color: #bfe3e8; }
