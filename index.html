@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FSKTM IT Club</title>
+  <style>
+    /* Task 2: page reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef2f5;
+      color: #1f2d3d;
+      line-height: 1.5;
+      padding: 10px;
+    }
+
+    /* Main container: column flex */
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 600px;
+    }
+
+    /* Major regions: stacked vertically, 10px top spacing between them */
+    .logo, .navigation, .content, .footer {
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+    .container > :first-child { margin-top: 0; }
+
+    .logo       { min-height: 100px; }
+    .navigation { min-height: 50px; }
+    .content    { min-height: 400px; }
+    .footer     { min-height: 20px; }
+
+    /* Logo / header (replace the gradient with the downloaded header image if you like) */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 16px 24px;
+      color: #ffffff;
+      background: linear-gradient(110deg, #12304f 0%, #12304f 45%, #2a8f9b 100%);
+    }
+    .logo h1 { font-size: 2rem; }
+    .logo p  { font-size: 0.9rem; color: #bfe3e8; }
+
+    /* Navigation */
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      background: #1f3c63;
+    }
+    .navigation a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+    .navigation a:hover,
+    .navigation a:focus { background: #2a8f9b; }
+
+    /* Content: row flex with space-between */
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    /* Two columns */
+    .side-bar {
+      width: 20%;
+      min-height: 400px;
+      padding: 16px;
+      background: #dde8ee;
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+    .side-bar h3 { font-size: 1.1rem; color: #1f3c63; margin-bottom: 8px; }
+    .side-bar p  { margin-bottom: 10px; }
+    .side-bar ul { margin: 0 0 16px 18px; }
+    .side-bar li { margin-bottom: 6px; }
+    .side-bar a  { color: #1f3c63; font-weight: bold; }
+
+    .body-area {
+      width: 70%;
+      min-height: 400px;
+      padding: 24px;
+      background: #ffffff;
+      overflow-wrap: anywhere;
+    }
+    .body-area h2 { font-size: 1.5rem; color: #1f3c63; margin-bottom: 10px; }
+    .body-area h3 { font-size: 1.15rem; color: #1f3c63; margin: 20px 0 6px; }
+    .body-area p  { font-size: 0.95rem; margin-bottom: 10px; }
+    .body-area ul { margin-left: 20px; font-size: 0.95rem; }
+    .body-area li { margin-bottom: 4px; }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #1f3c63;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
+
+    /* Task 3: responsive layout (tablet / mobile) */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .side-bar,
+      .body-area {
+        width: 100%;
+        min-height: 0;
+      }
+      .side-bar { margin-bottom: 10px; }
+      .logo h1  { font-size: 1.5rem; }
+      .navigation {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <h1>FSKTM IT Club</h1>
+      <p>Learn. Build. Innovate. Together.</p>
+    </div>
+
+    <div class="navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+      <div class="side-bar">
+        <h3>Club Corner</h3>
+        <p>Explore activities and opportunities available to our members.</p>
+        <ul>
+          <li><a href="#events">Upcoming Events</a></li>
+          <li><a href="#resources">Learning Resources</a></li>
+          <li><a href="#contact">Join the Club</a></li>
+        </ul>
+        <h3>Weekly meet-up</h3>
+        <p>Wednesday, 3:00 PM<br>Student Activity Room</p>
+      </div>
+
+      <div class="body-area">
+        <h2 id="home">Discover Technology, Create Possibilities</h2>
+        <p>Welcome to the FSKTM IT Club! We are a student-led community for people interested in web development, programming, design and emerging technology.</p>
+
+        <h3 id="about">About Our Club</h3>
+        <p>Our mission is to help students build practical skills through hands-on workshops, mini projects and knowledge-sharing sessions. Everyone is welcome, including beginners.</p>
+
+        <h3 id="events">Upcoming Activities</h3>
+        <ul>
+          <li><strong>HTML &amp; CSS Workshop:</strong> Create your first website.</li>
+          <li><strong>Hackathon Day:</strong> Build an idea with your team.</li>
+          <li><strong>Tech Talk:</strong> Learn from industry speakers.</li>
+        </ul>
+
+        <h3 id="resources">Learning Resources</h3>
+        <p>Start learning with free tutorials at <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3 Schools</a>.</p>
+
+        <h3 id="contact">Contact</h3>
+        <p>Questions? Visit us at the weekly meet-up.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 FSKTM IT Club. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
